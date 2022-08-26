@@ -167,10 +167,10 @@
             
             <div class="row">
               <div class="col">
-                Available: {{count($students)}}
+                Total Students: {{count($students)}}
               </div>
               <div class="col">
-                Assigned:32
+                Assigned:{{count($students)}}
               </div>
               <div class="col">
                 
