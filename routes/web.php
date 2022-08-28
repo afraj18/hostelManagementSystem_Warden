@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Hostels as ControllersHostels;
+use App\Http\Controllers\HostelsController;
 use App\Http\Controllers\StudentController;
 use App\Models\Hostels;
 use App\Models\Students;
@@ -20,7 +22,7 @@ use Illuminate\Support\Facades\Request;
 */
 
 Route::get('/hostels', function () {
-    return view('dashboard', [
+    return view('hostels', [
         'header' => "UWU Accomodation Centre Dashboard",
         'hostels' => Hostels::all()
     ]);
@@ -38,6 +40,10 @@ Route::get('/login', function () {
 Route::get('/', function () {
     return view('welcome', []);
 });
+
+Route::get('/addHostel', [HostelsController::class, 'index']);
+
+Route::post('/createHostel', [HostelsController::class, 'createHostel']);
 
 Route::get('/addStudents', [StudentController::class, 'index']);
 
