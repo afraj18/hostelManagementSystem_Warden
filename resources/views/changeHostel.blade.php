@@ -1,20 +1,3 @@
-{{-- @extends('layout')
-
-@section('content') --}}
-
-    {{-- @if (count($hostels)==0)
-        <h5>No Data available</h5>
-        
-    @endif
-    @foreach ($hostels as $hostel)
-
-    <a href="/hostel/{{$hostel->id}}"><h1> {{$hostel->id}}. {{$hostel->hostel_name}}</h1> </a> 
-    <address> Address : {{$hostel->address}}
-        </address>
-    <br> Gender :  {{$hostel->type}}
-    @endforeach --}}
-{{-- @endsection --}}
-
 <!DOCTYPE html>
 <html>
 
@@ -46,8 +29,8 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  
 
 </head>
 
@@ -67,8 +50,8 @@
               <p>Welcome to Student Accomodation Portal!</p>
               <!-- <div class="user_option "> -->
                 <div class="user_option ">
-                <a href="/addHostel" class="order_online ">
-                  Add New Hostel
+                <a href="" class="order_online ">
+                  Log Out
                 </a>
               </div>
               <!-- </div> -->
@@ -86,11 +69,13 @@
   </div>
 
   <!-- food section -->
+ 
+
   <section class="layout_padding ">
     <div class="container">
-      <div class="heading_container heading_center">
+      <div class="heading_container heading_center ">
         <h2>
-          Hostels
+         Change the Hostel 
         </h2>
         <p>
           for students of Uva wellassa university
@@ -98,79 +83,92 @@
       </div>
       
       <div class="justify-content-md-center ">
-        <div class="container-student col-md-12 bg-light border border-secondary ">
+        <div class="container-student col-md-12 bg-light text-secondary border border-secondary ">
 
         <!--table div started-->
         <div>
-          <br><br>
-          <div class="container">       
-            <table class="table table-striped  table-bordered ">
+          <h2 style="text-align: center;">From</h2><br><br>
+          <form class="was-validated">
+            <div class="input-group mb-3">
+              <input type="email" class="form-control" placeholder="Enter student's e-mail" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Search</button>
+              </div>
+            </div>
+
+
+            <div class="form-row" id="studentHostelDetais">
+              <div class="col-7">
+                <input type="text" class="form-control" placeholder=" Hostel name" disabled>
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Hostel type" disabled>
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Room No." disabled>
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Bed No." disabled>
+              </div>
+            </div>
+            <br><h2 style="text-align: center;">To</h2><br><br> 
+
+
+            <table class="table ">
               <thead>
                 <tr>
-                  <th>#</th>
-                  <th>Hostel Name</th>
-                  <th>Hostel type</th>
-                  <th>Room count</th>
-                  <th>Beds per a room</th>
-                  <th>Hostel address</th>
-                  <th>Contact number</th>
+                  <th><label for="validationTextarea" class="form-label">New Hostel Name</label></th>
+                  <th><label for="validationTextarea" class="form-label">Hostel type</label></th>
+                  <th><label for="validationTextarea" class="form-label">Room No.</label></th>
+                  <th><label for="validationTextarea" class="form-label">Bed No.</label></th>
                 </tr>
               </thead>
-              <tbody>
-                @if (count($hostels)==0)
-                <h5>No Data available</h5>
-                @endif
-                @foreach ($hostels as $hostel)
-                
-                <tr>
-                    <td>{{$hostel->id}}</td>
-                    <td>{{$hostel->hostel_name}}</td>
-                    <td>{{$hostel->type}}</td>
-                    <td>{{$hostel->no_room}}</td>
-                    <td>{{$hostel->room_capacity}}</td>
-                    <td>{{$hostel->address}}</td>
-                    <td>{{$hostel->contact_no}}</td>
-                  </tr>
 
-            {{-- <a href="/hostel/{{$hostel->id}}"><h1> {{$hostel->id}}. {{$hostel->hostel_name}}</h1> </a> 
-            <address> Address : {{$hostel->address}}
-                </address>
-            <br> Gender :  {{$hostel->type}} --}}
-                @endforeach
-                {{-- <tr>
-                  <td>1</td>
-                  <td>Bluesapphire</td>
-                  <td>Girls</td>
-                  <td>100</td>
-                  <td>2</td>
-                  <td>Bluesapphire hostel, Uva wellassa university</td>
-                  <td>0123456789</td>
-                </tr>
+              <tbody>
                 <tr>
-                  <td>2</td>
-                  <td>Silvertips</td>
-                  <td>Girls</td>
-                  <td>100</td>
-                  <td>2</td>
-                  <td>Silvertips hostel, Uva wellassa university</td>
-                  <td>0123456789</td>
-                </tr> --}}
+                  
+                  <td>
+                    <div class="mb-6">
+                      <select id="disabledSelect" class="form-select" >
+                        <option>Select Hostel Name</option>
+                        <option>Galaxy Hostel</option>
+                        <option>Kadella</option>
+                        <option>Hanthana</option>
+                      </select>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="mb-6">
+                      <select id="disabledSelect" class="form-select" >
+                        <option>Select Hostel Type</option>
+                        <option>Boys</option>
+                        <option>Girls</option>
+                      </select>
+                    </div>
+                  </td>
+    
+                  <td><input type="number" id="roomQuantity" name="quantity" min="1" max=" "></td>
+                  <td><input type="number" id="bedQuantity" name="quantity" min="1" max=" "></td>
+                  
+                </tr>
                 
               </tbody>
+
             </table>
+            <br>
+
+           <br> 
+           <div class="d-grid gap-2">
+            <button class="btn btn-secondary" type="button">Change</button>
+           
           </div>
+
+          </form>
         </div>
         <!--table div end-->
-        
-
       </div>
-    <!-- </div>
-
-    <div class="user_option appealbutton">
-     <a href="" class="order_online">
-        VIEW HOSTELS
-      </a>
-    </div> -->
+    </div>
    
   </section>
 

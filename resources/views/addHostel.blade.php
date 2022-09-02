@@ -42,14 +42,14 @@
     <header class="header_section">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="/">
             <span>
               <img src="images/unilogo.png" alt="uva_wellassa_university.jpg" class="navbarlogo">
               <p>Welcome to Student Accomodation Portal!</p>
               <!-- <div class="user_option "> -->
                 <div class="user_option ">
-                <a href="" class="order_online ">
-                  Log Out
+                <a href="/hostels" class="order_online ">
+                  Hostel Details
                 </a>
               </div>
               <!-- </div> -->

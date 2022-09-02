@@ -40,6 +40,17 @@ Route::get('/login', function () {
 Route::get('/', function () {
     return view('welcome', []);
 });
+Route::get('/dashboard', function () {
+    return view('dashboard', []);
+});
+
+Route::get('/subwardens', function () {
+    return view('subWardens', []);
+});
+
+Route::get('/changeHostel', function () {
+    return view('changeHostel', []);
+});
 
 Route::get('/addHostel', [HostelsController::class, 'index']);
 

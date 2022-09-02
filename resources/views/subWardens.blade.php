@@ -14,7 +14,6 @@
     <br> Gender :  {{$hostel->type}}
     @endforeach --}}
 {{-- @endsection --}}
-
 <!DOCTYPE html>
 <html>
 
@@ -48,9 +47,7 @@
   <link href="css/responsive.css" rel="stylesheet" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
 </head>
-
 <body class="sub_page">
 
   <div class="hero_area">
@@ -65,32 +62,20 @@
             <span>
               <img src="images/unilogo.png" alt="uva_wellassa_university.jpg" class="navbarlogo">
               <p>Welcome to Student Accomodation Portal!</p>
-              <!-- <div class="user_option "> -->
-                <div class="user_option ">
-                <a href="/addHostel" class="order_online ">
-                  Add New Hostel
-                </a>
-              </div>
-              <!-- </div> -->
             </span>
-          </a>
-            
-        </nav>
-        
-        
+          </a>          
+        </nav>              
       </div>
       
     </header>
     <!-- end header section -->
-    
   </div>
-
   <!-- food section -->
   <section class="layout_padding ">
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
-          Hostels
+          Sub wardens
         </h2>
         <p>
           for students of Uva wellassa university
@@ -108,53 +93,57 @@
               <thead>
                 <tr>
                   <th>#</th>
+                  <th> First Name</th>
+                  <th> Last Name</th>
+                  <th>Gender </th>
+                  <th> Email</th>
+                  <th> Contact</th>
                   <th>Hostel Name</th>
-                  <th>Hostel type</th>
-                  <th>Room count</th>
-                  <th>Beds per a room</th>
-                  <th>Hostel address</th>
-                  <th>Contact number</th>
+
                 </tr>
               </thead>
               <tbody>
-                @if (count($hostels)==0)
+                {{-- @if (count($hostels)==0)
                 <h5>No Data available</h5>
                 @endif
-                @foreach ($hostels as $hostel)
+                @foreach ($hostels as $hostel) --}}
                 
                 <tr>
-                    <td>{{$hostel->id}}</td>
+                    {{-- <td>{{$hostel->id}}</td>
                     <td>{{$hostel->hostel_name}}</td>
                     <td>{{$hostel->type}}</td>
                     <td>{{$hostel->no_room}}</td>
                     <td>{{$hostel->room_capacity}}</td>
                     <td>{{$hostel->address}}</td>
-                    <td>{{$hostel->contact_no}}</td>
-                  </tr>
+                    <td>{{$hostel->contact_no}}</td> --}}
+                </tr>
+                    
 
             {{-- <a href="/hostel/{{$hostel->id}}"><h1> {{$hostel->id}}. {{$hostel->hostel_name}}</h1> </a> 
             <address> Address : {{$hostel->address}}
                 </address>
             <br> Gender :  {{$hostel->type}} --}}
-                @endforeach
-                {{-- <tr>
+                {{-- @endforeach --}}
+                 <tr>
                   <td>1</td>
-                  <td>Bluesapphire</td>
-                  <td>Girls</td>
-                  <td>100</td>
-                  <td>2</td>
-                  <td>Bluesapphire hostel, Uva wellassa university</td>
-                  <td>0123456789</td>
+                  <td>Melanga</td>
+                  <td>Dissanayake</td>
+                  <td>Male</td>
+                  <td>iit18054@std.uwu.ac.lk</td>
+                  <td>0721321232</td>
+                  <td>Coral Beauty</td>
+
                 </tr>
                 <tr>
                   <td>2</td>
-                  <td>Silvertips</td>
-                  <td>Girls</td>
-                  <td>100</td>
-                  <td>2</td>
-                  <td>Silvertips hostel, Uva wellassa university</td>
-                  <td>0123456789</td>
-                </tr> --}}
+                  <td>Kaushalya</td>
+                  <td>Shanthi Kumar</td>
+                  <td>Female</td>
+                  <td>iit18033@std.uwu.ac.lk</td>
+                  <td>0712323221</td>
+                  <td>Blue Shapire</td>
+
+                </tr> 
                 
               </tbody>
             </table>

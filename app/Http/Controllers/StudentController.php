@@ -18,7 +18,6 @@ class StudentController extends Controller
     public function importStudents(Request $request)
     {
         Excel::import(new StudentsImport, $request->file('student_file'));
-
         return back();
     }
 }
