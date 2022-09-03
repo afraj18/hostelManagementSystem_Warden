@@ -135,10 +135,6 @@
                     <td>{{$hostel->contact_no}}</td>
                   </tr>
 
-            {{-- <a href="/hostel/{{$hostel->id}}"><h1> {{$hostel->id}}. {{$hostel->hostel_name}}</h1> </a> 
-            <address> Address : {{$hostel->address}}
-                </address>
-            <br> Gender :  {{$hostel->type}} --}}
                 @endforeach
                 {{-- <tr>
                   <td>1</td>

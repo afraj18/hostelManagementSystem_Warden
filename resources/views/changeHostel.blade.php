@@ -88,7 +88,7 @@
         <!--table div started-->
         <div>
           <h2 style="text-align: center;">From</h2><br><br>
-          <form class="was-validated">
+          <form action="" class="was-validated">
             <div class="input-group mb-3">
               <input type="email" class="form-control" placeholder="Enter student's e-mail" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
               <div class="input-group-append">

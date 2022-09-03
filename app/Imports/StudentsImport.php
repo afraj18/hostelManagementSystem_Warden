@@ -17,7 +17,7 @@ class StudentsImport implements ToModel, WithHeadingRow, WithValidation
         if (strtolower($gender) == "male") {
             $hostelName = array();
 
-            foreach (Hostels::all()->where('type', '=', 'male') as $hostel) {
+            foreach (Hostels::all()->where('level', '=', $year)->where('type', '=', 'male') as $hostel) {
                 array_push($hostelName, $hostel->hostel_name);
             }
             $bRandVal = rand(0, 2);

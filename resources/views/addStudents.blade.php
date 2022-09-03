@@ -151,7 +151,7 @@
               <td>{{$student->reg_no}}</td>
               <td>{{$student->first_name}} {{$student->last_name}}</td>
               <td>{{$student->gender}}</td>
-              <td>{{$student->year}} Year</td>
+              <td>{{$student->year}} </td>
               <td>{{$student->hostel}}</td>
               <td>{{$student->room_no}}</td>
               <td>{{$student->bed_no}}</td>
