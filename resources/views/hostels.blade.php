@@ -92,6 +92,7 @@
         <h2>
           Hostels
         </h2>
+          {{-- {{$hostels}} --}}
         <p>
           for students of Uva wellassa university
         <p>
@@ -106,9 +107,11 @@
           <div class="container">       
             <table class="table table-striped  table-bordered ">
               <thead>
+              
                 <tr>
                   <th>#</th>
                   <th>Hostel Name</th>
+                  <th>level of hostel</th>
                   <th>Hostel type</th>
                   <th>Room count</th>
                   <th>Beds per a room</th>
@@ -118,13 +121,13 @@
               </thead>
               <tbody>
                 @if (count($hostels)==0)
-                <h5>No Data available</h5>
+                <h5 style="color:black">No Data available</h5>
                 @endif
                 @foreach ($hostels as $hostel)
-                
                 <tr>
                     <td>{{$hostel->id}}</td>
                     <td>{{$hostel->hostel_name}}</td>
+                    <td>{{$hostel->level}}</td>
                     <td>{{$hostel->type}}</td>
                     <td>{{$hostel->no_room}}</td>
                     <td>{{$hostel->room_capacity}}</td>

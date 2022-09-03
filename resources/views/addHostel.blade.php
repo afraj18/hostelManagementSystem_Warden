@@ -117,15 +117,16 @@
                 <div class="col ">
                   <label for="validationTextarea" class="form-label">Hostel Type</label>
                 </div>
+                
                 <div class="col">
                   <div>
-                    <input class="form-check-input" type="radio" name="type" id="radioNoLabel1" value="Boys" aria-label="..." required>
+                    <input class="form-check-input" type="radio" name="type" id="radioNoLabel1" value="male" aria-label="..." required>
                     <label for="validationTextarea" class="form-label">Boys</label>
                   </div>
                 </div>
                 <div class="col">
                   <div>
-                    <input class="form-check-input " type="radio" name="type" id="radioNoLabel1" value="Girls" aria-label="..." required>
+                    <input class="form-check-input " type="radio" name="type" id="radioNoLabel1" value="female" aria-label="..." required>
                     <label for="validationTextarea" class="form-label" >Girls</label>
                   </div> 
                 </div>
@@ -133,6 +134,46 @@
                 <div class="col"></div>
               </div>
             </div>
+
+            <div class="mb-3 ">
+              <br>
+              <div class="row ">
+                <div class="col ">
+                  <label for="validationTextarea" class="form-label">Hostel Level</label>
+                </div>
+                
+                <div class="col">
+                  <div>
+                    <input class="form-check-input" type="radio" name="level" id="radioNoLabel1" value="100 Level" aria-label="..." required>
+                    <label for="validationTextarea" class="form-label">100 Level</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div>
+                    <input class="form-check-input " type="radio" name="level" id="radioNoLabel1" value="200 Level" aria-label="..." required>
+                    <label for="validationTextarea" class="form-label" >200 Level</label>
+                  </div> 
+                </div>
+                
+                <div class="col">
+                  <div>
+                    <input class="form-check-input " type="radio" name="level" id="radioNoLabel1" value="300 Level" aria-label="..." required>
+                    <label for="validationTextarea" class="form-label" >300 Level</label>
+                  </div> 
+                </div>
+                <div class="col">
+                  <div>
+                    <input class="form-check-input " type="radio" name="level" id="radioNoLabel1" value="400 Level" aria-label="..." required>
+                    <label for="validationTextarea" class="form-label" >400 Level</label>
+                  </div> 
+                </div>
+                
+                <div class="col"></div>
+              </div>
+            </div>
+
+            <!-- Example single danger button -->
+           
             <div class="mb-3">
               
               <label for="validationTextarea" class="form-label">No. of Rooms of the Hostel</label>

@@ -23,6 +23,7 @@ class HostelsController extends Controller
             'room_capacity' => 'required',
             'address' => 'required',
             'contact_no' => 'required|unique:hostels',
+            'level' => 'required',
 
         ]);
 
@@ -33,6 +34,7 @@ class HostelsController extends Controller
             'address' => $request->input('address'),
             'contact_no' => $request->input('contact_no'),
             'type' => $request->input('type'),
+            'level' => $request->input('level'),
         ]);
 
         if ($query) {

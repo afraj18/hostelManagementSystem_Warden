@@ -150,22 +150,22 @@
               
              
               <div class="navbar-nav w-100">
-                  <a href="#" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Assign Hostel</a> 
+                  <a href="/addStudents" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Add Students</a> 
               </div>
               <div class="navbar-nav w-100">
-                <a href="#" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Assign Hostels</a> 
+                <a href="/addHostel" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Add Hostels</a> 
               </div>
               <div class="navbar-nav w-100">
               <a href="#" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>View Appeals</a> 
              </div>
             <div class="navbar-nav w-100">
-           <a href="#" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Change Hostels</a> 
+           <a href="/changeHostel" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Change Hostels</a> 
              </div>
              <div class="navbar-nav w-100">
-            <a href="#" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Manage Subwardens</a> 
+            <a href="/subwardens" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Manage Subwardens</a> 
               </div>
               <div class="navbar-nav w-100">
-                <a href="#" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>SIGN_OUT</a> 
+                <a href="#" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>SIGN OUT</a> 
                   </div>
           </nav>
            
@@ -184,7 +184,6 @@
       <div class="col">
         <h5 id="rcorners2">Total Students</h5>
         <h5 id="rcorners3">100</h5>
-        
       </div>
       <div class="col">
         

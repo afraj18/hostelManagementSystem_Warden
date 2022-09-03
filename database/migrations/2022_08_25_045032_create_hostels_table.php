@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('address');
             $table->string('contact_no');
             $table->string('type');
+            $table->string('level');
             $table->timestamps();
         });
     }

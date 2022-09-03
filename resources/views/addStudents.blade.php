@@ -142,6 +142,8 @@
               <td class="table-active">Gender</td>
               <td class="table-active">Year</td>
               <td class="table-active">Hostel</td>
+              <td class="table-active">Room No</td>
+              <td class="table-active">Bed No</td>              
 
 
             @foreach ($students as $student)
@@ -151,6 +153,8 @@
               <td>{{$student->gender}}</td>
               <td>{{$student->year}} Year</td>
               <td>{{$student->hostel}}</td>
+              <td>{{$student->room_no}}</td>
+              <td>{{$student->bed_no}}</td>
             </tr>
 
               
@@ -169,9 +173,9 @@
               <div class="col">
                 Total Students: {{count($students)}}
               </div>
-              <div class="col">
+              {{-- <div class="col">
                 Assigned:{{count($students)}}
-              </div>
+              </div> --}}
               <div class="col">
                 
               </div>

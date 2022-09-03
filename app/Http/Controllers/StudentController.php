@@ -15,6 +15,7 @@ class StudentController extends Controller
         $students = Students::all();
         return view('addStudents', compact('students'));
     }
+
     public function importStudents(Request $request)
     {
         Excel::import(new StudentsImport, $request->file('student_file'));

@@ -26,16 +26,16 @@ class DatabaseSeeder extends Seeder
 
 
 
-        Hostels::create(
-            [
-                'hostel_name' => 'Coral Beauty',
-                'no_room' => 60,
-                'room_capacity' => 2,
-                'address' => 'Badulusirigama',
-                'contact_no' => '0712323233',
-                'type' => 'male'
-            ]
-        );
+        // Hostels::create(
+        //     [
+        //         'hostel_name' => 'Coral Beauty',
+        //         'no_room' => 60,
+        //         'room_capacity' => 2,
+        //         'address' => 'Badulusirigama',
+        //         'contact_no' => '0712323233',
+        //         'type' => 'male'
+        //     ]
+        // );
         // Hostels::create(
         //     [
         //         'hostelName' => 'Blue Sapphire',

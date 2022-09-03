@@ -30,7 +30,7 @@ Route::get('/hostels', function () {
 Route::get('/hostel/{id}', function ($id) {
     return view('hostelDetails', [
         'header' => "UWU Accomodation Centre Dashboard",
-        'hostels' => Hostels::find($id)
+        'hostels' => Hostels::find($id),
     ]);
 });
 Route::get('/login', function () {
