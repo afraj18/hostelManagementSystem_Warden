@@ -29,33 +29,44 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-
-  
-
 </head>
-
-{{-- <h2>{{$student[0]->reg_no}}</h2>
-<h2>{{$student[0]->hostel}}</h2>
-<h2>{{$student[0]->room_no}}</h2>
-<h2>{{$student[0]->bed_no}}</h2>
-
-<h2>{{$student[0]->year}}</h2> --}}
-<br><h4 style="text-align: center; ">Current Details</h4><br>
-<div class="form-row ml-2 mr-2" id="studentHostelDetais">
+<br><h4 style="text-align: center; ">Current Details</h4>
+<div class="form-row ml-2 mr-2 " style="justify-content: center" id="studentHostelDetais">
     <div class="col-7">
-      <input type="text" class="form-control" placeholder=" Hostel name" value="{{$student[0]->hostel}}" disabled>
-<br>
-      <input type="text" class="form-control" placeholder="Hostel type" value="{{$student[0]->gender}}" disabled>
-<br>
-      <input type="text" class="form-control" placeholder="Room No." value="{{$student[0]->room_no}}" disabled>
-<br>
-      <input type="text" class="form-control" placeholder="Bed No." value="{{$student[0]->bed_no}}" disabled>
+      <form action="/updateStudent" method="POST">
+        @csrf
+        <label for="" class="m-1"> Name : </label>
+        <input type="text" class="form-control" placeholder="name" name="name" value="{{$student[0]->first_name }} {{$student[0]->last_name}}" disabled>
+        <label for="" class="m-1">Registration Number : </label>
+        <input type="text" class="form-control" name="reg_no" placeholder=" Registration number" value="{{$student[0]->reg_no}}" disabled>
+        <label for="" class="m-1">Email address : </label>
+        <input type="text" class="form-control" name="email" placeholder=" Registration number" value="{{$student[0]->email}}" >
+        {{-- <label for="" class="m-1">Hostel Name : </label>
+        <input type="text" class="form-control" placeholder=" Hostel name" value="{{$student[0]->hostel}}" > --}}
+        <label for="" class="m-1">Hostel Name : </label>
+        <br><div class="mb-6">
+          <select id="disabledSelect" name="hostel" class="form-select" >
+            <option>{{$student[0]->hostel}}</option>
+            @foreach ($hostels as $hostel)
+            <option value="{{$hostel->hostel_name}}">{{$hostel->hostel_name}}</option>                
+            @endforeach
+          </select>
+        </div>
+        <label for="" class="m-1">Room number : </label>
+        <input type="text" class="form-control" placeholder="Room No." name="room_no" value="{{$student[0]->room_no}}" >
+        <label for="" class="m-1">Bed number : </label>
+        <input type="text" class="form-control" placeholder="Bed No." name="bed_no" value=" {{$student[0]->bed_no}}" >
+        <br>
+        <div style="text-align: center;" class="d-grid gap-2">
+          <button class="btn btn-secondary text-center col-11" type="submit">Change</button>
+      </form>
+    
     </div>
   </div>
-  <br><h2 style="text-align: center;">To</h2><br><br> 
+  {{-- <br><h2 style="text-align: center;">To</h2><br><br>  --}}
 
 
-  <table class="table ">
+  {{-- <table class="table ml-5 mr-5">
     <thead>
       <tr>
         <th><label for="validationTextarea" class="form-label">New Hostel Name</label></th>
@@ -75,8 +86,7 @@
               @foreach ($hostels as $hostel)
               <option value="{{$hostel->hostel_name}}">{{$hostel->hostel_name}}</option>                
               @endforeach
-              <option>Kadella</option>
-              <option>Hanthana</option>
+
             </select>
           </div>
         </td>
@@ -85,8 +95,8 @@
           <div class="mb-6">
             <select id="disabledSelect" class="form-select" >
               <option>Select Hostel Type</option>
-              <option>Male</option>
-              <option>Female</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
             </select>
           </div>
         </td>
@@ -98,10 +108,9 @@
       
     </tbody>
 
-  </table>
+  </table> --}}
 
- <div style="text-align: center;" class="d-grid gap-2">
-  <button class="btn btn-secondary text-center" type="button">Change</button>
+ 
 
 
   

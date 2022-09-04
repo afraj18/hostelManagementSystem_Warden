@@ -6,6 +6,7 @@ use App\Models\Hostels;
 use App\Models\Students;
 use Illuminate\Http\Request;
 use App\Imports\StudentsImport;
+use Illuminate\Console\View\Components\Alert;
 use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -51,5 +52,25 @@ class StudentController extends Controller
     {
         Excel::import(new StudentsImport, $request->file('student_file'));
         return back();
+    }
+
+    public static function updateStudent(Request $request)
+    {
+        // dd($request);
+        $email = $request->input('email');
+        $hostel = $request->input('hostel');
+        $room_no = $request->input('room_no');
+        $bed_no = $request->input('bed_no');
+
+        // dd($hostel);
+        // dd($reg_no);
+        if (DB::table('students')
+            ->where('email', $email)
+            ->update(['hostel' => $hostel, 'room_no' => $room_no, 'bed_no' => $bed_no])
+        ) {
+            return view('addStudents', ['students' => Students::all()]);
+        } else {
+            return back()->with("fail", "Something went wrong");
+        }
     }
 }
