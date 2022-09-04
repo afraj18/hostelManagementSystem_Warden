@@ -24,4 +24,10 @@ class Hostels extends Model
         $records = DB::table('hostels')->select('room_capacity')->where('hostel_name', '=', $hostel)->value('room_capacity');
         return $records;
     }
+    public static function getHostelCoount($gender, $year)
+    {
+        $records = DB::table('hostels')->select('hostel_name')
+            ->where('type', '=', $gender)->where('level', '=', $year)->get()->count();
+        return $records;
+    }
 }

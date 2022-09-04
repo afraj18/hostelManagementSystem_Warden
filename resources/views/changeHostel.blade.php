@@ -88,15 +88,16 @@
         <!--table div started-->
         <div>
           <h2 style="text-align: center;">From</h2><br><br>
-          <form action="" class="was-validated">
+          <form action="/searchStudent" method="POST" class="was-validated">
+              @csrf
             <div class="input-group mb-3">
-              <input type="email" class="form-control" placeholder="Enter student's e-mail" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+              <input type="email" name="email" class="form-control" placeholder="Enter student's e-mail" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
               <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button">Search</button>
+                <button class="btn btn-outline-secondary" type="submit">Search</button>
               </div>
             </div>
 
-
+{{-- 
             <div class="form-row" id="studentHostelDetais">
               <div class="col-7">
                 <input type="text" class="form-control" placeholder=" Hostel name" disabled>
@@ -161,7 +162,7 @@
            <br> 
            <div class="d-grid gap-2">
             <button class="btn btn-secondary" type="button">Change</button>
-           
+            --}}
           </div>
 
           </form>

@@ -18,4 +18,12 @@ class Students extends Model
         $records = DB::table('students')->select('reg_no', 'first_name', 'last_name', 'year', 'email', 'hostel', 'gender');
         return $records;
     }
+
+    public static function searchStudents($email)
+    {
+        $records = DB::table('students')
+            ->select('reg_no', 'first_name', 'last_name', 'year', 'email', 'hostel', 'gender', 'room_no', 'bed_no')
+            ->where('email', "=", $email)->get();
+        return $records;
+    }
 }

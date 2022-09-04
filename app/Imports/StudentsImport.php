@@ -20,14 +20,16 @@ class StudentsImport implements ToModel, WithHeadingRow, WithValidation
             foreach (Hostels::all()->where('level', '=', $year)->where('type', '=', 'male') as $hostel) {
                 array_push($hostelName, $hostel->hostel_name);
             }
-            $bRandVal = rand(0, 2);
+            $count = Hostels::getHostelCoount($gender, $year);
+            $bRandVal = rand(0, $count - 1);
             return $hostelName[$bRandVal];
         } elseif (strtolower($gender) == "female") {
             $girlsHostelName = array();
             foreach (Hostels::all()->where('type', '=', 'female') as $hostel) {
                 array_push($girlsHostelName, $hostel->hostel_name);
             }
-            $gRandVal = rand(0, 2);
+            $count = Hostels::getHostelCoount($gender, $year);
+            $gRandVal = rand(0, $count - 1);
             return $girlsHostelName[$gRandVal];
         }
     }

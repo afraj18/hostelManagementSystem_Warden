@@ -21,18 +21,19 @@ use Illuminate\Support\Facades\Request;
 |
 */
 
-Route::get('/hostels', function () {
-    return view('hostels', [
-        'header' => "UWU Accomodation Centre Dashboard",
-        'hostels' => Hostels::all()
-    ]);
-});
+
 Route::get('/hostel/{id}', function ($id) {
     return view('hostelDetails', [
         'header' => "UWU Accomodation Centre Dashboard",
         'hostels' => Hostels::find($id),
     ]);
 });
+// Route::post('/searchStudennt', function ($reg_no) {
+//     return view('studentDetail', [
+//         // 'header' => "UWU Accomodation Centre Dashboard",
+//         'student' => Students::searchStudents($reg_no),
+//     ]);
+// });
 Route::get('/login', function () {
     return view('login', []);
 });
@@ -52,6 +53,12 @@ Route::get('/changeHostel', function () {
     return view('changeHostel', []);
 });
 
+Route::get('/hostels', function () {
+    return view('hostels', [
+        'header' => "UWU Accomodation Centre Dashboard",
+        'hostels' => Hostels::all()
+    ]);
+});
 Route::get('/addHostel', [HostelsController::class, 'index']);
 
 Route::post('/createHostel', [HostelsController::class, 'createHostel']);
@@ -59,3 +66,5 @@ Route::post('/createHostel', [HostelsController::class, 'createHostel']);
 Route::get('/addStudents', [StudentController::class, 'index']);
 
 Route::post('/importStudents', [StudentController::class, 'importStudents'])->name('import');
+
+Route::post('/searchStudent', [StudentController::class, 'searchStudent']);
