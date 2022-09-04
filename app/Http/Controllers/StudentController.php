@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Hostels;
 use App\Models\Students;
 use Illuminate\Http\Request;
 use App\Imports\StudentsImport;
@@ -37,7 +38,10 @@ class StudentController extends Controller
         // return $records;
 
         if ($records) {
-            return view('studentDetail', ['student' => Students::searchStudents($request->input('email'))]);
+            return view('studentDetail', [
+                'student' => Students::searchStudents($request->input('email')),
+                'hostels' => Hostels::all(),
+            ]);
         } else {
             // return back()->with("fail", "Something went wrong");
         }

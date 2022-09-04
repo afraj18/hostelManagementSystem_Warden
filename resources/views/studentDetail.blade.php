@@ -72,7 +72,9 @@
           <div class="mb-6">
             <select id="disabledSelect" class="form-select" >
               <option>Select Hostel Name</option>
-              <option>Galaxy Hostel</option>
+              @foreach ($hostels as $hostel)
+              <option value="{{$hostel->hostel_name}}">{{$hostel->hostel_name}}</option>                
+              @endforeach
               <option>Kadella</option>
               <option>Hanthana</option>
             </select>
@@ -83,8 +85,8 @@
           <div class="mb-6">
             <select id="disabledSelect" class="form-select" >
               <option>Select Hostel Type</option>
-              <option>Boys</option>
-              <option>Girls</option>
+              <option>Male</option>
+              <option>Female</option>
             </select>
           </div>
         </td>
